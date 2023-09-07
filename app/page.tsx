@@ -2,6 +2,6 @@
 
 export default function Home() {
   return (
-    <p>Hello AI SaaS</p>
+    <p className="text-6xl text-green-500">Hello AI SaaS</p>
   )
 }
