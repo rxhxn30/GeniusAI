@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { Link } from "lucide-react";
+import { LayoutDashboard, Link } from "lucide-react";
 import {Montserrat} from "next/font/google"
 import {cn} from "@/lib/utils"
 
@@ -9,6 +9,15 @@ const montserrat = Montserrat({
     weight:"600",
     subsets:["latin"]
 })
+
+const routes = [
+    {
+        label: "Dashboard",
+        icon: LayoutDashboard,
+        href: "/dashboard",
+        color: "text-sky-500",
+    },
+]
 
 const Sidebar = () => {
     return(
