@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Code, ImageIcon, LayoutDashboard, Link, MessageSquare, Music, MusicIcon, Settings, VideoIcon } from "lucide-react";
 import {Montserrat} from "next/font/google"
 import {cn} from "@/lib/utils"
-
+import {usePathname} from "next/navigation"
 
 const montserrat = Montserrat({
     weight:"600",
@@ -55,6 +55,7 @@ const routes = [
 ]
 
 const Sidebar = () => {
+    const pathname = usePathname();
     return(
         <div className="space-y-4 py-4 flex flex-col h-full bg-[#111827] text-white">
             <div className="px-3 py-2 flex-1">
