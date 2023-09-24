@@ -1,9 +1,12 @@
 "use client";
+
 import Image from "next/image";
-import { Code, ImageIcon, LayoutDashboard, Link, MessageSquare, Music, MusicIcon, Settings, VideoIcon } from "lucide-react";
+import { Code, ImageIcon, LayoutDashboard, MessageSquare, Music, MusicIcon, Settings, VideoIcon } from "lucide-react";
 import {Montserrat} from "next/font/google"
 import {cn} from "@/lib/utils"
 import {usePathname} from "next/navigation"
+import Link from "next/link"
+
 
 const montserrat = Montserrat({
     weight:"600",
