@@ -14,6 +14,9 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { ChatCompletionRequestMessage } from "openai";
 
+
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+
 const ConversationPage = () => {
     const router = useRouter();
     const [messages,setMessages] = useState<ChatCompletionRequestMessage[]>([]);
@@ -85,7 +88,13 @@ const ConversationPage = () => {
                     </Form>
                 </div>
                 <div className="space-y-4 mt-4">
-                    Messages Content
+                    <div className="flex flex-col-reverse gap-y-4">
+                        {messages.map((message) => (
+                            <div key={message.content}>
+                                {message.content}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
