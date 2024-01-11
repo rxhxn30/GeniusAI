@@ -22,4 +22,4 @@ export const Empty = ({
             </p>
         </div>
     );
-}
+};
